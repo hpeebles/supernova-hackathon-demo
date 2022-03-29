@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "dfx": "0.9.3",
+  "canisters": {
+    "hack": {
+      "type": "rust",
+      "package": "hack",
+      "candid": "src/hack/hack.did"
+    },
+    "hack_assets": {
+      "type": "assets",
+      "source": [
+        "src/hack_assets/assets"
+      ],
+      "dependencies": [
+        "hack"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
